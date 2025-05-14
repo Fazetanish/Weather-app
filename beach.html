@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beach Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: rgb(182, 215, 219);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            color: #333;
+        }
+        .description, .extra-info {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: blue;
+        }
+        .map-container {
+            margin-top: 20px;
+            width: 100%;
+            height: 450px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="beach-name">Beach Name</h1>
+        <p id="beach-info" class="description">This page displays information about the selected beach.</p>
+        <p id="extra-info" class="extra-info"></p>
+        <div class="map-container">
+            <iframe id="beach-map" src="" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <a class="back-link" href="v5.html">← Back to Main</a>
+    </div>
+
+    <script>
+      // Parse the beach name from URL query parameters
+      const params = new URLSearchParams(window.location.search);
+      const beachName = params.get("beach") || "Unknown Beach";
+
+      // Define dummy data with additional details and Google Map embed URLs for each beach.
+      // Also include extra dummy details such as temperature, wind speed, humidity, etc.
+      const beachDetails = {
+          "Bondi Beach": {
+              info: "Bondi Beach is located in Sydney, Australia. It is famous for its golden sands, vibrant beach culture, and excellent surfing opportunities. Visitors can enjoy cafes, art galleries, and scenic coastal walks nearby.",
+              extra: "Current Temperature: 26°C, Wind Speed: 15 km/h, Humidity: 60%, UV Index: 5",
+              map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.5472565168413!2d151.27347231521127!3d-33.89147518066186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae2f4f7b7201%3A0xe745c6e9f0b8f55a!2sBondi%20Beach!5e0!3m2!1sen!2sau!4v1740260000000"
+          },
+          "Goa Beach": {
+              info: "Goa Beach in India is renowned for its lively atmosphere, scenic beauty, and unique blend of cultures. It offers vibrant nightlife, eclectic food choices, and opportunities for both relaxation and water sports along the picturesque coastline.",
+              extra: "Current Temperature: 32°C, Wind Speed: 10 km/h, Humidity: 70%, UV Index: 8",
+              map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15084.176958567017!2d74.0095172734971!3d15.299326129724556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbdb38000000001%3A0x6e7f36f123456789!2sGoa%2C%20India!5e0!3m2!1sen!2sus!4v1740260100000"
+          },
+          "Marina Beach": {
+              info: "Marina Beach in Chennai, India is one of the longest urban beaches in the world. Known for its bustling environment, street food, and cultural landmarks, it attracts both locals and tourists who come to enjoy its sprawling coastline.",
+              extra: "Current Temperature: 28°C, Wind Speed: 12 km/h, Humidity: 65%, UV Index: 6",
+              map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0771914271983!2d80.287044315193!3d13.050007590754246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526673f134a0a3%3A0xabcd1234abcd5678!2sMarina%20Beach!5e0!3m2!1sen!2sin!4v1740260200000"
+          }
+      };
+
+      // Update page content based on selected beach
+      document.getElementById("beach-name").innerText = beachName;
+      const selectedBeach = beachDetails[beachName];
+      if (selectedBeach) {
+          document.getElementById("beach-info").innerText = selectedBeach.info;
+          document.getElementById("extra-info").innerText = selectedBeach.extra;
+          document.getElementById("beach-map").src = selectedBeach.map;
+      } else {
+          document.getElementById("beach-info").innerText = "No further information is available for this beach.";
+      }
+    </script>
+</body>
+</html>

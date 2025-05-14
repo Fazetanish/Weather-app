@@ -1,0 +1,91 @@
+.main {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.weather-app {
+    margin: 20px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    background: rgba(63, 62, 62, 0.588);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 26px 0 rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.weather-app:hover{
+    transform: scale(1.1);
+}
+
+.location {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.temperature {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.condition {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.data-visuals {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.data-card {
+    background: rgba(63, 62, 62, 0.588);
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+}
+
+.data-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    font-family: Arial, sans-serif;
+    background: rgba(63, 62, 62, 0.588);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+.weather-container {
+    background-color: #f0f8ff; /* Light blue background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding around the content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 400px; /* Maximum width */
+    margin: 20px auto; /* Center the container */
+    font-family: Arial, sans-serif; /* Font style */
+}
+
+.weather-container h2 {
+    text-align: center; /* Center the heading */
+    color: #333; /* Darker text color */
+}
+
+.weather-details p {
+    margin: 10px 0; /* Space between paragraphs */
+    font-size: 16px; /* Font size */
+    color: #555; /* Slightly lighter text color */
+}
+
+.weather-details strong {
+    color: #007BFF; /* Blue color for labels */
+}
