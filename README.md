@@ -1,4 +1,7 @@
 🌊 WeatherWave
+
+---
+
 WeatherWave is a dynamic and visually engaging weather web application that provides real-time information on beach conditions, tide reports, and oceanographic data across major cities. The app includes interactive maps, animated data charts, and a responsive UI, delivering a comprehensive snapshot of coastal weather conditions to help users plan their outings better.
 
 🌟 Features
