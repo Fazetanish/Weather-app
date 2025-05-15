@@ -21,35 +21,21 @@
 - Axios (for potential API integration)  
 - Google Maps Embed API  
 
+## 🚀 How to Run the Project
 
-🚀 How to Run the Project
-Clone the repository
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/Fazetanish/WeatherWave.git
+   cd WeatherWave
 
-bash
-Copy
-Edit
-git clone https://github.com/Fazetanish/WeatherWave.git
-cd WeatherWave
-Install dependencies
+2. **Install dependencies**
+   ```bash
+   npm install
 
-bash
-Copy
-Edit
-npm install
-Set up environment variables
+3. **Set up environment variables**
+Create a .env file in the root directory and add your API key:
 
-Create a .env file in the root directory and add:
 
-ini
-Copy
-Edit
-API_KEY=your_openweather_api_key
-Start the server
-
-bash
-Copy
-Edit
-node server.js
-Open the app in your browser
-
-Visit http://localhost:3000 to view the app.
+4. **Start the server**
+   ```bash
+   node server.js
