@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const axios = require('axios');
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
 const port = 3000;
@@ -21,7 +22,7 @@ app.get('/weather', async (req, res) => {
     method: 'GET',
     url: `https://open-weather13.p.rapidapi.com/city/${city}/EN`,
     headers: {
-      'x-rapidapi-key': '3b4dcc3610msh4c2b6bd36f76e79p1d9580jsn39a0c6b8ec65', 
+      'x-rapidapi-key': process.env.WEATHER_API_KEY, 
       'x-rapidapi-host': 'open-weather13.p.rapidapi.com'
     }
   };
